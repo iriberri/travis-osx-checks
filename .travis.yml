@@ -1,25 +1,21 @@
-os: linux
-language: android
-
-android:
-   components:
-     - tools
-     - platform-tools
-     - tools
-
-     - android-25
-     - build-tools-25.0.2
-
-     - extra
-     - extra-google-m2repository
-     - extra-android-m2repository
-     - extra-android-support
-
 matrix:
   include:
   - os: osx
     osx_image: xcode8.3
     language: objective_c
+  - os: linux
+    language: android
+    android:
+      components:
+        - tools
+        - platform-tools
+        - tools
+        - android-25
+        - build-tools-25.0.2
+        - extra
+        - extra-google-m2repository
+        - extra-android-m2repository
+        - extra-android-support  
 
 
 install:
